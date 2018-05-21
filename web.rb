@@ -21,6 +21,7 @@ get '/' do
 end
 
 post '/ephemeral_keys' do
+  content_type :json
   authenticate!
   begin
     key = Stripe::EphemeralKey.create(
