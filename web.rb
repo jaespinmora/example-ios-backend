@@ -88,6 +88,7 @@ end
 
 # This endpoint is used by the Obj-C and Android example apps to create a charge.
 post '/create_charge' do
+  content_type :json
   # Create the charge on Stripe's servers
   begin
     charge = Stripe::Charge.create(
