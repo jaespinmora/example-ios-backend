@@ -38,6 +38,7 @@ post '/ephemeral_keys' do
 end
 
 post '/charge' do
+  content_type :json
   authenticate!
   # Get the credit card details submitted
   payload = params
